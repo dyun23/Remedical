@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_main"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MapsFragment">
+    <!-- 지도를 표시하는 fragment -->
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/map"
+        tools:context=".MapsFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <!-- 하단의 버튼들을 위한 ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+        <!-- 병원 찾기 버튼 -->
+        <ImageButton
+            android:src="@drawable/btn_hostpital"
+            android:id="@+id/hospital"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!-- 약국 찾기 버튼 -->
+        <ImageButton
+            android:src="@drawable/btn_pharmacy"
+            android:id="@+id/pharmacy"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toEndOf="@+id/hospital"
+            app:layout_constraintTop_toTopOf="@id/hospital"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

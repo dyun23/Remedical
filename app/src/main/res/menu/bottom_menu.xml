@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuCalendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="캘린더"
+        android:enabled="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuMap"
+        android:icon="@drawable/ic_map"
+        android:title="병원 및 약국 지도"
+            android:enabled="true"
+            app:showAsAction="always"/>
+    <item
+        android:id="@+id/menuMypage"
+        android:icon="@drawable/ic_mypage"
+        android:title="마이페이지"
+            android:enabled="true"
+            app:showAsAction="always"/>
+</menu>

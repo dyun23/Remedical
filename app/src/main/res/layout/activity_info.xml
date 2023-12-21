@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/infopage"
+    tools:context=".InfoActivity">
+
+
+    <!-- 이름 입력을 위한 에디트 텍스트 -->
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="187dp"
+        android:ems="10"
+        android:hint="ex) 홍길동"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 생년월일 입력을 위한 에디트 텍스트 -->
+    <EditText
+        android:id="@+id/et_birth"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="241dp"
+        android:ems="10"
+        android:hint="ex) 19990123"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 질병명 입력을 위한 에디트 텍스트 -->
+    <EditText
+        android:id="@+id/et_illname"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="293dp"
+        android:ems="10"
+        android:hint="ex) 당뇨병"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 복용 시간 입력을 위한 에디트 텍스트 (세 개) -->
+    <EditText
+        android:id="@+id/et_illtime1"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="347dp"
+        android:ems="10"
+        android:hint="ex)오전9시 → 0900"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_illtime2"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="400dp"
+        android:ems="10"
+        android:hint="ex) 1430"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_illtime3"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="453dp"
+        android:ems="10"
+        android:hint="ex) 2000"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 확인 버튼 -->
+    <ImageButton
+        android:id="@+id/BtnCheck"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="604dp"
+        android:background="@color/invisible"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 이메일 표시를 위한 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="56dp"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

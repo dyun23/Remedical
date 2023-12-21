@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Remedical" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/main</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.Remedical" parent="Base.Theme.Remedical" />
+
+    <!--    <style name="SlideActivityAnimations" parent="@android:style/Animation.Activity">-->
+    <!--        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>-->
+    <!--        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>-->
+    <!--    </style>-->
+</resources>

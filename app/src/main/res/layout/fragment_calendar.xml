@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CalendarFragment">
+    <!-- ConstraintLayout을 사용한 주요 콘텐츠 영역 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <!-- 달력 뷰 -->
+        <CalendarView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calendarView"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.488" android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!-- 메모 표시를 위한 텍스트 뷰 -->
+        <TextView
+            android:textColor="@color/main"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity= "center"
+            android:id="@+id/memoTextView" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+        <!-- 메모 입력을 위한 에디트 텍스트 -->
+        <EditText
+            android:textColor="@color/darkgrey"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            android:inputType="textMultiLine"
+            android:textSize="18dp"
+            android:ems="18"
+            android:id="@+id/contextEditText"
+            app:layout_constraintTop_toBottomOf="@+id/memoTextView" android:layout_marginTop="11dp"
+            android:hint=" 자유롭게 메모를 남겨보세요\n ex)그 날의 특이사항, 약 못먹은 이유" android:layout_marginEnd="15dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp" android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
+            android:visibility="invisible"/>
+        <!-- 일정 및 메모를 표시하는 텍스트뷰 -->
+        <TextView
+            android:textColor="@color/main"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="0dp"
+            android:layout_height="145dp"
+            android:id="@+id/textView2"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp" android:layout_marginRight="20dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp" android:visibility="invisible"/>
+
+        <!-- 약 복용 확인을 위한 텍스트뷰 및 이미지뷰 -->
+        <TextView
+            android:textColor="@color/main"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity= "center"
+            android:id="@+id/illCheck1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/memoTextView"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="20dp"
+            android:text="아침 약 : "/>
+        <ImageView
+            android:id="@+id/img_ill1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/no"
+            app:layout_constraintStart_toEndOf="@id/illCheck1"
+            app:layout_constraintTop_toTopOf="@id/illCheck1"/>
+        <TextView
+            android:textColor="@color/main"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity= "center"
+            android:id="@+id/illCheck2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/illCheck1"
+            app:layout_constraintStart_toEndOf="@+id/img_ill1"
+            android:layout_marginTop="16dp"
+            android:text="점심 약 : "/>
+        <ImageView
+            android:id="@+id/img_ill2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/no"
+            app:layout_constraintStart_toEndOf="@id/illCheck2"
+            app:layout_constraintTop_toTopOf="@id/illCheck2"/>
+        <TextView
+            android:textColor="@color/main"
+            android:fontFamily="@font/bmjua"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:gravity= "center"
+            android:id="@+id/illCheck3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/illCheck1"
+            app:layout_constraintStart_toEndOf="@+id/img_ill2"
+            android:layout_marginTop="16dp"
+            android:text="저녁 약 : "/>
+        <ImageView
+            android:id="@+id/img_ill3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/no"
+            app:layout_constraintStart_toEndOf="@id/illCheck3"
+            app:layout_constraintTop_toTopOf="@id/illCheck3"/>
+
+        <!-- 저장, 변경, 삭제 버튼을 위한 이미지버튼 -->
+        <ImageButton
+            android:src="@drawable/btn_save"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/save_Btn" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/contextEditText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:visibility="invisible"/>
+
+        <ImageButton
+            android:id="@+id/cha_Btn"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_cha"
+            android:visibility="invisible"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/save_Btn"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageButton
+            android:src="@drawable/btn_del"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:id="@+id/del_Btn"
+            app:layout_constraintTop_toTopOf="@id/cha_Btn"
+            app:layout_constraintStart_toEndOf="@id/cha_Btn"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:visibility="invisible"></ImageButton>
+        <ImageButton
+            android:src="@drawable/btn_upload"
+            android:background="@color/invisible"
+            android:scaleType="centerInside"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/update_Btn" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/contextEditText" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:visibility="invisible"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1.25dp"
+            android:background="@color/main"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/illCheck1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

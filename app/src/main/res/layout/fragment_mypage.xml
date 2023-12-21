@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MypageFragment"
+    android:background="@drawable/mypage"
+    android:orientation="vertical" >
+
+    <!-- 사용자 이메일을 표시하는 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="548dp"
+        android:textSize="19dp"
+        android:gravity="center"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 비밀번호 확인 라벨 -->
+    <TextView
+        android:id="@+id/tv_pw"
+        android:text="비밀번호 확인 : "
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:textSize="20dp"
+        android:textColor="@color/main"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@id/et_pw"
+        app:layout_constraintTop_toTopOf="@+id/et_pw" />
+
+    <!-- 비밀번호 입력 필드 -->
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="595dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="invisible"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 사용자 이름을 표시하는 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="208dp"
+        android:textColor="@color/main"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textFontWeight="800"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 사용자 생년월일을 표시하는 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_birth"
+        android:layout_width="120dp"
+        android:layout_height="25dp"
+        android:textSize="23dp"
+        android:layout_marginStart="280dp"
+        android:gravity="center"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_name" />
+
+    <!-- 질병명을 표시하는 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_illname"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="370dp"
+        android:textColor="@color/main"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 질병명을 입력하는 에디트 텍스트 -->
+    <EditText
+        android:id="@+id/et_illname"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="365dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/main"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/tv_illname"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 복용 시간을 표시하는 텍스트 뷰 -->
+    <TextView
+        android:id="@+id/tv_illTime1"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="445dp"
+        android:textSize="20dp"
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 복용 시간을 입력하는 에디트 텍스트 -->
+    <EditText
+        android:id="@+id/et_illTime1"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="440dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:gravity="center_vertical"
+        android:textColor="@color/main"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/tv_illTime1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_illTime2"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="485dp"
+        android:textColor="@color/main"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_illTime2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="480dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/main"
+        app:layout_constraintStart_toStartOf="@id/tv_illTime2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_illTime3"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="527dp"
+        android:textColor="@color/main"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_illTime3"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="522dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/main"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/tv_illTime3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 프로그레스 바, 로딩 중이거나 대기 중임을 나타냄 -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="420dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 정보 변경 버튼 -->
+    <ImageButton
+        android:id="@+id/BtnCha"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="635dp"
+        android:background="@color/invisible"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_mypage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- 정보 업데이트 버튼 -->
+    <ImageButton
+        android:id="@+id/BtnUpdate"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/btn_upload"
+        android:visibility="invisible"
+        android:background="@color/invisible"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="@id/BtnCha"
+        app:layout_constraintTop_toTopOf="@id/BtnCha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

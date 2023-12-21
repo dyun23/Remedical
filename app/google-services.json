@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "354836943194",
+    "firebase_url": "https://remedical-617a9-default-rtdb.firebaseio.com",
+    "project_id": "remedical-617a9",
+    "storage_bucket": "remedical-617a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354836943194:android:10f7a7ae3131a6d4e8e363",
+        "android_client_info": {
+          "package_name": "com.example.infopage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAShx8Ceog0p1eGC8BKhdkmsbkIsR_s6rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354836943194:android:d4142c11bc992fafe8e363",
+        "android_client_info": {
+          "package_name": "com.example.remedical"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAShx8Ceog0p1eGC8BKhdkmsbkIsR_s6rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

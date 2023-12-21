@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Remedical</string>
+    <string name="open" />
+    <string name="closed" />
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="map_id">AIzaSyC51AtMlnu-5IPQ_1GaxAZ8da8RlsR9vJo</string>
+</resources>
